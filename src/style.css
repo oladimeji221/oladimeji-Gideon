@@ -98,6 +98,31 @@ em { font-family: Georgia, serif; font-weight: 400; }
 .archive-title > b { color: var(--orange); }
 .archive-grid > a > p { font-size: 12px; line-height: 1.55; color: #5d584f; }
 
+.apps { background: #171713; color: white; }
+.apps .eyebrow::before { color: var(--acid); }
+.app-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.app-card { min-height: 720px; position: relative; overflow: hidden; padding: 36px; display: flex; flex-direction: column; }
+.app-card-moed { background: #1647bc; }
+.app-card-bookamia { background: #d9ff43; color: var(--ink); grid-column: 1 / -1; min-height: 820px; }
+.app-card-biztidy { background: #18aaa9; }
+.app-copy { position: relative; z-index: 2; max-width: 570px; }
+.app-number { font: 500 10px "DM Mono"; letter-spacing: .12em; }
+.app-copy h3 { font-size: clamp(46px,5.5vw,82px); letter-spacing: -.065em; margin: 24px 0 13px; }
+.app-copy p { line-height: 1.65; max-width: 530px; font-size: 14px; }
+.apps .tags span { border-color: rgba(255,255,255,.35); }
+.app-card-bookamia .tags span { border-color: rgba(17,17,15,.3); }
+.phone-stage { flex: 1; display: flex; align-items: flex-end; justify-content: center; min-height: 430px; margin-top: 28px; }
+.phone-stage img { display: block; width: auto; max-height: 530px; border-radius: 28px 28px 0 0; box-shadow: 0 30px 70px rgba(0,0,0,.28); object-fit: cover; object-position: top; transition: transform .45s ease; }
+.phone-stage.single img { transform: rotate(3deg) translateY(25px); }
+.app-card-biztidy .phone-stage.single img { transform: rotate(-3deg) translateY(25px); }
+.app-card:hover .phone-stage.single img { transform: rotate(0) translateY(10px); }
+.phone-stage.trio { gap: 3vw; align-items: flex-end; margin: -70px 0 -130px 31%; min-height: 620px; }
+.phone-stage.trio img { width: min(22vw, 290px); max-height: none; border-radius: 30px; }
+.phone-stage.trio img:first-child { transform: rotate(-8deg) translateY(70px); }
+.phone-stage.trio img:nth-child(2) { transform: translateY(5px); position: relative; z-index: 2; }
+.phone-stage.trio img:last-child { transform: rotate(8deg) translateY(70px); }
+.app-card-bookamia:hover .phone-stage.trio img { transform: rotate(0) translateY(25px); }
+
 .about { display: grid; grid-template-columns: .75fr 1.25fr; gap: 9vw; background: #e6e2d7; }
 .portrait-wrap { position: relative; align-self: center; }
 .portrait-frame { max-width: 490px; aspect-ratio: .78; overflow: hidden; filter: saturate(.65); }
@@ -163,6 +188,10 @@ footer { padding: 24px 4vw; background: var(--ink); color: rgba(255,255,255,.7);
   .section-heading { gap: 25px; }
   .project-card { min-height: 570px; }
   .archive-grid { grid-template-columns: 1fr 1fr; }
+  .app-showcase { grid-template-columns: 1fr; }
+  .app-card-bookamia { grid-column: auto; }
+  .phone-stage.trio { margin: 30px -20px -80px; gap: 15px; min-height: 540px; }
+  .phone-stage.trio img { width: 31%; }
   .about { gap: 70px; }
   .experience-grid { grid-template-columns: 1fr; }
   .education-card { max-width: 560px; transform: none; }
@@ -182,6 +211,10 @@ footer { padding: 24px 4vw; background: var(--ink); color: rgba(255,255,255,.7);
   .project-grid { grid-template-columns: 1fr; }
   .project-archive summary > span { flex-direction: column; gap: 5px; }
   .archive-grid { grid-template-columns: 1fr; }
+  .app-card { min-height: 640px; padding: 28px 22px; }
+  .app-card-bookamia { min-height: 700px; }
+  .phone-stage.trio { min-height: 400px; margin-top: 20px; }
+  .phone-stage.trio img { border-radius: 16px; }
   .timeline article { grid-template-columns: 1fr; gap: 16px; }
   .project-card { min-height: 520px; padding: 22px 20px 0; }
   .project-copy { margin-top: 40px; }

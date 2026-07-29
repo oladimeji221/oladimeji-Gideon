@@ -12,6 +12,11 @@ import grameJohnsImage from '../assets/img/portfolio/gramejohns.png'
 import gatunImage from '../assets/img/portfolio/gatunsecurity.png'
 import primeShieldImage from '../assets/img/portfolio/primeshieldcare.png'
 import birthdayImage from '../assets/img/portfolio/birthday.png'
+import moedImage from '../assets/img/apps/moed.jpeg'
+import bookamiaImage from '../assets/img/apps/bookamia.jpeg'
+import bookamiaSplashImage from '../assets/img/apps/bookamia_splash.jpeg'
+import vendorDashboardImage from '../assets/img/apps/vendor_dashboard.jpeg'
+import bizTidyImage from '../assets/img/apps/biztidy.png'
 
 const menuOpen = ref(false)
 const scrolled = ref(false)
@@ -155,6 +160,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       </a>
       <nav :class="{ open: menuOpen }" aria-label="Main navigation">
         <a href="#work" @click="menuOpen = false">Work</a>
+        <a href="#apps" @click="menuOpen = false">Apps</a>
         <a href="#about" @click="menuOpen = false">About</a>
         <a href="#experience" @click="menuOpen = false">Experience</a>
         <a href="#capabilities" @click="menuOpen = false">Capabilities</a>
@@ -236,6 +242,56 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
             </component>
           </div>
         </details>
+      </section>
+
+      <section id="apps" class="apps section-pad">
+        <div class="section-heading light">
+          <div>
+            <span class="eyebrow">Mobile products</span>
+            <h2>Ideas that live<br />in your pocket.</h2>
+          </div>
+          <p>Cross-platform product experiences built around real customer journeys—from discovery and booking to vendor operations.</p>
+        </div>
+
+        <div class="app-showcase">
+          <article class="app-card app-card-moed">
+            <div class="app-copy">
+              <span class="app-number">APP / 01</span>
+              <h3>Moed</h3>
+              <p>An event management and discovery system that helps people find experiences, book tickets, manage a wallet, and connect with event vendors.</p>
+              <div class="tags"><span>React Native</span><span>Events</span><span>Marketplace</span></div>
+            </div>
+            <div class="phone-stage single">
+              <img :src="moedImage" alt="Moed event management mobile app home screen" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="app-card app-card-bookamia">
+            <div class="app-copy">
+              <span class="app-number">APP / 02</span>
+              <h3>Bookamia</h3>
+              <p>A multi-booking marketplace for hotels, eateries, events, cabs and movies—with a dedicated vendor dashboard for listings, bookings, earnings and withdrawals.</p>
+              <div class="tags"><span>React Native</span><span>Multi-booking</span><span>Vendor dashboard</span></div>
+            </div>
+            <div class="phone-stage trio">
+              <img :src="bookamiaSplashImage" alt="Bookamia mobile app welcome screen" loading="lazy" />
+              <img :src="bookamiaImage" alt="Bookamia multi-booking customer experience" loading="lazy" />
+              <img :src="vendorDashboardImage" alt="Bookamia vendor dashboard showing listings and earnings" loading="lazy" />
+            </div>
+          </article>
+
+          <article class="app-card app-card-biztidy">
+            <div class="app-copy">
+              <span class="app-number">APP / 03</span>
+              <h3>BizTidy</h3>
+              <p>A cleaning-services booking app for discovering residential, commercial and industrial services and managing appointments.</p>
+              <div class="tags"><span>React Native</span><span>Services</span><span>Booking</span></div>
+            </div>
+            <div class="phone-stage single">
+              <img :src="bizTidyImage" alt="BizTidy cleaning services booking mobile app" loading="lazy" />
+            </div>
+          </article>
+        </div>
       </section>
 
       <section id="about" class="about section-pad">
